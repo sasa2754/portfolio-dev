@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState('');
-  const texts = ['Frontend Developer', 'IoT Enthusiast', 'Problem Solver', 'Tech Creator'];
+  const texts = ['Fullstack Developer', 'IoT Enthusiast', 'Problem Solver', 'Tech Creator'];
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -38,6 +38,13 @@ const Hero = () => {
     }
   };
 
+  const downloadcv = () => {
+    const link = document.createElement("a");
+    link.href = "/curriculo.pdf";
+    link.download = "Currículo - Sabrina_Mortean.pdf"; // nome bonitinho do arquivo
+    link.click();
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
@@ -50,7 +57,7 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Olá, eu sou
-            <span className="gradient-text block mt-2">Desenvolvedora</span>
+            <span className="gradient-text block mt-2">Sabrina Mortean</span>
           </h1>
           
           <div className="text-2xl md:text-3xl mb-8 h-12 flex items-center justify-center">
@@ -67,21 +74,23 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-200">
-            <Button size="lg" className="glow hover:scale-105 transition-transform">
+            <Button size="lg" className="glow hover:scale-105 transition-transform" onClick={downloadcv}>
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </Button>
-            <Button variant="outline" size="lg" className="hover:scale-105 transition-transform">
-              <Github className="mr-2 h-5 w-5" />
-              Ver Projetos
+            <Button variant="outline" size="lg" className="hover:scale-105 transition-transform" asChild>
+              <a href="https://github.com/sasa2754?tab=repositories" target="_blank">
+                <Github className="h-5 w-5" />
+                Ver Projetos
+              </a>
             </Button>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="left-1/2 mt-6 translate translate-x-1/2 animate-bounce">
           <button onClick={scrollToAbout} className="text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowDown className="h-6 w-6" />
+            <ArrowDown className="h-6 w-6 " />
           </button>
         </div>
       </div>

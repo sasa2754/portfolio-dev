@@ -1,12 +1,13 @@
 
 import { Code, Lightbulb, Zap, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import foto from "@/assets/foto.jpg"
 
 const About = () => {
   const highlights = [
     {
       icon: Code,
-      title: 'Frontend Expert',
+      title: 'Fullstack Expert',
       description: 'Especializada em React, TypeScript e criação de interfaces modernas'
     },
     {
@@ -43,9 +44,9 @@ const About = () => {
             <div className="gradient-border">
               <div className="gradient-border-content">
                 <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=500&fit=crop&crop=face"
+                  src={foto}
                   alt="Profile"
-                  className="w-full h-80 object-cover rounded-lg"
+                  className="w-full h-80 object-cover object-[center_65%] rounded-lg"
                 />
               </div>
             </div>
@@ -55,7 +56,7 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4 gradient-text">Minha Jornada</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Sou uma desenvolvedora frontend apaixonada por criar experiências digitais que fazem a diferença. 
+                Sou uma desenvolvedora fullstack apaixonada por criar experiências digitais que fazem a diferença. 
                 Minha jornada começou com curiosidade sobre como as coisas funcionam, e evoluiu para uma paixão 
                 por transformar ideias em realidade através do código.
               </p>

@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -35,15 +35,15 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'dev@portfolio.com', href: 'mailto:dev@portfolio.com' },
-    { icon: Phone, label: 'Telefone', value: '+55 (11) 99999-9999', href: 'tel:+5511999999999' },
-    { icon: MapPin, label: 'Localização', value: 'São Paulo, Brasil', href: '#' }
+    { icon: Mail, label: 'Email', value: 'sasamor5@gmail.com', href: 'mailto:sasamor5@gmail.com' },
+    { icon: Phone, label: 'Telefone', value: '+55 (41) 99521-3923', href: 'tel:+5541995213923' },
+    { icon: MapPin, label: 'Localização', value: 'Paraná, Brasil', href: 'https://maps.app.goo.gl/U8GMd6kJHRt29dir5' }
   ];
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: '#', color: 'hover:text-gray-400' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'hover:text-blue-400' },
-    { icon: Twitter, label: 'Twitter', href: '#', color: 'hover:text-sky-400' }
+    { icon: Github, label: 'GitHub', href: 'https://github.com/sasa2754', color: 'hover:text-gray-400' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/sabrina-mortean-70a52b230/', color: 'hover:text-blue-400' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/sabrina.2754/', color: 'hover:text-sky-400' }
   ];
 
   return (
@@ -58,9 +58,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Contact Info */}
-          <div className="animate-slide-in-left">
+          <div className="animate-slide-in-left flex flex-col">
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-6 gradient-text">Entre em Contato</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -75,6 +75,7 @@ const Contact = () => {
                   key={item.label}
                   href={item.href}
                   className="flex items-center space-x-4 p-4 rounded-lg bg-card/30 hover:bg-card/50 transition-all duration-300 group"
+                  target="_blank"
                 >
                   <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white group-hover:scale-110 transition-transform">
                     <item.icon className="h-5 w-5" />
@@ -87,13 +88,14 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 self-center lg:self-end">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   className={`p-3 bg-card/30 hover:bg-card/50 rounded-full transition-all duration-300 ${link.color} hover:scale-110`}
                   aria-label={link.label}
+                  target="_blank"
                 >
                   <link.icon className="h-6 w-6" />
                 </a>
@@ -102,7 +104,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-in-right">
+          {/* <div className="animate-slide-in-right">
             <Card className="bg-card/30 border-border/50">
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -164,7 +166,7 @@ const Contact = () => {
                 </form>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Gamepad2, GraduationCap, Cpu } from 'lucide-react';
+import pokedex from "@/assets/pokedex.png"
+import iduca from "@/assets/iduca.png"
+import niatron from "@/assets/niatron.png"
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -12,34 +15,32 @@ const Projects = () => {
       id: 1,
       title: 'Jogo Pokémon',
       description: 'Um jogo interativo do Pokémon desenvolvido com JavaScript vanilla, apresentando batalhas, captura de pokémons e interface nostálgica dos jogos clássicos.',
-      image: 'https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=600&h=400&fit=crop',
-      tags: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Game Development'],
+      image: pokedex,
+      tags: ['TypeScript', 'Next.js', 'Mui', 'Game Development'],
       icon: Gamepad2,
       color: 'from-red-500 to-yellow-500',
-      github: '#',
-      demo: '#'
+      github: 'https://github.com/sasa2754/pokedexFront',
+      demo: 'https://pokedex-front-rho.vercel.app'
     },
     {
       id: 2,
       title: 'Plataforma Iduca',
       description: 'Uma plataforma completa de cursos online com sistema de autenticação, progresso do aluno, vídeo aulas e certificados digitais.',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop',
+      image: iduca,
       tags: ['React', 'Node.js', 'MongoDB', 'Express'],
       icon: GraduationCap,
       color: 'from-blue-500 to-purple-500',
-      github: '#',
-      demo: '#'
+      github: 'https://github.com/Iduca-Project/Iduca-frontend',
     },
     {
       id: 3,
-      title: 'Projeto IoT Smart Home',
-      description: 'Sistema inteligente para automação residencial usando sensores, Arduino e interface web para controle remoto de dispositivos domésticos.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
-      tags: ['Arduino', 'React', 'Firebase', 'IoT'],
+      title: 'Website Niatron',
+      description: 'Website moderno e responsivo desenvolvido para a Niatron, empresa de automação e eletrônica, com foco em performance, identidade visual e usabilidade.',
+      image: niatron,
+      tags: ['Frontend', 'React', 'Backend', 'Next.js'],
       icon: Cpu,
       color: 'from-green-500 to-teal-500',
-      github: '#',
-      demo: '#'
+      demo: 'https://www.niatron.com.br'
     }
   ];
 
@@ -95,17 +96,25 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <div className={`flex gap-2 transition-all duration-300 ${
+                <div className={`flex  gap-2 transition-all duration-300 w-full ${
                   hoveredProject === project.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                 }`}>
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
-                  </Button>
+                  {project.github && (
+                    <Button size="sm" variant="outline" className='w-full'>
+                      <a href={project.github} className='flex flex-row'>
+                        <Github className="h-4 w-4 mr-2" />
+                        <span>Code</span>
+                      </a>
+                    </Button>
+                  )}
+                  {project.demo && (
+                    <Button size="sm" className='w-full'>
+                      <a href={project.demo} className='flex flex-row'>
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        <span>Site</span>
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

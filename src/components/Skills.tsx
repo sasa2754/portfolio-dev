@@ -31,9 +31,9 @@ const Skills = () => {
       skills: [
         { name: 'Git', level: 90, color: 'from-orange-500 to-red-500' },
         { name: 'Figma', level: 85, color: 'from-purple-500 to-pink-500' },
-        { name: 'Docker', level: 75, color: 'from-blue-500 to-blue-700' },
-        { name: 'Firebase', level: 80, color: 'from-yellow-500 to-orange-600' },
-        { name: 'MongoDB', level: 78, color: 'from-green-500 to-green-700' }
+        { name: 'SQL', level: 95, color: 'from-blue-500 to-blue-700' },
+        { name: 'Firebase', level: 60, color: 'from-yellow-500 to-orange-600' },
+        { name: 'MongoDB', level: 88, color: 'from-green-500 to-green-700' }
       ]
     }
   ];
@@ -72,14 +72,15 @@ const Skills = () => {
                       <div className="flex justify-between items-center mb-2">
                         <span className="font-medium">{skill.name}</span>
                         <span className="text-sm text-muted-foreground">
-                          {hoveredSkill === skill.name ? `${skill.level}%` : ''}
+                          {skill.level}%
+                          {/* {hoveredSkill === skill.name ? `${skill.level}%` : ''} */}
                         </span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
                         <div 
                           className={`h-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out rounded-full`}
                           style={{ 
-                            width: hoveredSkill === skill.name ? `${skill.level}%` : '0%',
+                            width: `${skill.level}%`,
                             transition: 'width 1s ease-out'
                           }}
                         />

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Code, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Code, Github, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -49,14 +49,20 @@ const Header = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Github className="h-5 w-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://github.com/sasa2754" target="_blank">
+                <Github className="h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Linkedin className="h-5 w-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://www.linkedin.com/in/sabrina-mortean-70a52b230/" target="_blank">
+                <Linkedin className="h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Mail className="h-5 w-5" />
+            <Button variant="ghost" size="icon" asChild>
+              <a href="https://www.instagram.com/sabrina.2754/" target="_blank">
+                <Instagram className="h-5 w-5" />
+              </a>
             </Button>
           </div>
 

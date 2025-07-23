@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-muted-foreground mt-4 md:mt-0">
-            © 2024 - Todos os direitos reservados
+            © 2025 - Todos os direitos reservados
           </div>
         </div>
       </div>
