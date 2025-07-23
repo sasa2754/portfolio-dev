@@ -40,8 +40,8 @@ const Hero = () => {
 
   const downloadcv = () => {
     const link = document.createElement("a");
-    link.href = "/curriculo.pdf";
-    link.download = "Currículo - Sabrina_Mortean.pdf"; // nome bonitinho do arquivo
+    link.href = "/portfolio-dev/curriculo.pdf";
+    link.download = "Currículo - Sabrina_Mortean.pdf"; 
     link.click();
   };
 
