@@ -20,7 +20,7 @@ const Skills = () => {
       title: 'Backend & IoT',
       skills: [
         { name: 'Node.js', level: 80, color: 'from-green-600 to-green-800' },
-        { name: 'Arduino', level: 75, color: 'from-teal-600 to-blue-600' },
+        { name: 'Arduino & ESP32', level: 75, color: 'from-teal-600 to-blue-600' },
         { name: 'Raspberry Pi', level: 70, color: 'from-red-500 to-pink-500' },
         { name: 'Python', level: 78, color: 'from-blue-500 to-yellow-500' },
         { name: 'APIs REST', level: 85, color: 'from-purple-500 to-pink-500' }
