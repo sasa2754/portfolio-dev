@@ -9,31 +9,31 @@ const Skills = () => {
     {
       title: 'Frontend',
       skills: [
-        { name: 'React', level: 95, color: 'from-blue-500 to-cyan-500' },
-        { name: 'TypeScript', level: 90, color: 'from-blue-600 to-indigo-600' },
+        { name: 'React', level: 80, color: 'from-blue-500 to-cyan-500' },
+        { name: 'TypeScript', level: 75, color: 'from-blue-600 to-indigo-600' },
         { name: 'Next.js', level: 85, color: 'from-gray-700 to-gray-900' },
-        { name: 'Tailwind CSS', level: 92, color: 'from-teal-500 to-green-500' },
-        { name: 'JavaScript', level: 88, color: 'from-yellow-500 to-orange-500' }
+        { name: 'Tailwind CSS', level: 100, color: 'from-teal-500 to-green-500' },
+        { name: 'JavaScript', level: 70, color: 'from-yellow-500 to-orange-500' }
       ]
     },
     {
       title: 'Backend & IoT',
       skills: [
         { name: 'Node.js', level: 80, color: 'from-green-600 to-green-800' },
-        { name: 'Arduino & ESP32', level: 75, color: 'from-teal-600 to-blue-600' },
-        { name: 'Raspberry Pi', level: 70, color: 'from-red-500 to-pink-500' },
-        { name: 'Python', level: 78, color: 'from-blue-500 to-yellow-500' },
-        { name: 'APIs REST', level: 85, color: 'from-purple-500 to-pink-500' }
+        { name: 'Arduino & ESP32', level: 60, color: 'from-teal-600 to-blue-600' },
+        { name: 'Raspberry Pi', level: 55, color: 'from-red-500 to-pink-500' },
+        { name: 'Python', level: 85, color: 'from-blue-500 to-yellow-500' },
+        { name: 'APIs REST', level: 90, color: 'from-purple-500 to-pink-500' }
       ]
     },
     {
       title: 'Tools & Others',
       skills: [
         { name: 'Git', level: 90, color: 'from-orange-500 to-red-500' },
-        { name: 'Figma', level: 85, color: 'from-purple-500 to-pink-500' },
-        { name: 'SQL', level: 95, color: 'from-blue-500 to-blue-700' },
-        { name: 'Firebase', level: 60, color: 'from-yellow-500 to-orange-600' },
-        { name: 'MongoDB', level: 88, color: 'from-green-500 to-green-700' }
+        { name: 'Figma', level: 100, color: 'from-purple-500 to-pink-500' },
+        { name: 'SQL', level: 70, color: 'from-blue-500 to-blue-700' },
+        { name: 'Firebase', level: 40, color: 'from-yellow-500 to-orange-600' },
+        { name: 'MongoDB', level: 55, color: 'from-green-500 to-green-700' }
       ]
     }
   ];
